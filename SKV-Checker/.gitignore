@@ -1,0 +1,10 @@
+# Bevat gebruikersnaam en wachtwoord: NOOIT naar GitHub
+appsettings.json
+
+# Snelkoppelingen bevatten een vast pad van jouw eigen pc
+*.lnk
+
+# Eigen testgegevens en exports
+TestWaarden.txt
+SKV_controle_*.txt
+*.pdf

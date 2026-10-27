@@ -1,0 +1,97 @@
+﻿SKV CERTIFICAAT CHECKER - LEESMIJ
+=================================
+
+Wat doet het?
+-------------
+Je vult 1 UBN (Uniek Bedrijfsnummer) en 1 tot 5 AM91-nummers in en drukt op
+"Controleer". Het programma haalt zelf een bearer-token op bij SKV en vraagt
+per AM91-nummer het certificaat op.
+
+Per regel zie je:
+  groen vinkje   = gelukt, status GECERTIFICEERD en nog geldig
+  oranje !       = gelukt, maar let op (status is niet GECERTIFICEERD, of verlopen)
+  rood !         = fout (HTTP-fout zoals 404, lege lijst [], of geen verbinding)
+
+Dubbelklik op een regel voor het volledige antwoord (JSON). Daar kun je ook
+de certificaat-PDF en de stallijst-PDF opslaan.
+Met "Exporteren..." sla je het overzicht op als .txt-bestand.
+
+
+EENMALIG INSTALLEREN (ongeveer 5 minuten)
+-----------------------------------------
+Stap 1. Downloaden
+        Ga naar de GitHub-pagina van dit project en klik op de groene knop
+        "Code" > "Download ZIP".
+
+Stap 2. Zip deblokkeren
+        Klik met de rechtermuisknop op de zip > Eigenschappen.
+        Staat onderaan "Blokkering opheffen" (of "Unblock")? Vink dat aan
+        en klik op OK. Zie je dat vakje niet, dan is er niets aan de hand.
+
+Stap 3. Uitpakken
+        Rechtermuisknop op de zip > "Alles uitpakken..." naar bijvoorbeeld:
+            C:\Tools\SKV-Checker
+        Gebruik een map die alleen van jou is (dus niet een gedeelde
+        netwerkschijf!), omdat het wachtwoord in de map komt te staan.
+
+Stap 4. Instellingen invullen
+        Kopieer appsettings.example.json en noem de kopie appsettings.json.
+        (Vergeet je dit, dan doet het programma het bij de eerste start zelf.)
+        Klik met de rechtermuisknop op appsettings.json > Openen met >
+        Kladblok. Vervang:
+            URL voor de Token          door de URL voor de token
+            URL voor het certificaat   door de URL van het certificaat
+            Gebruikersnaam             door je SKV-gebruikersnaam
+            Wachtwoord                 door je SKV-wachtwoord
+        Laat de aanhalingstekens " staan! Voorbeeld:
+            "Username": "Usrxxx123",
+        Opslaan (Ctrl+S) en Kladblok sluiten.
+
+Stap 5. (optioneel) Snelkoppeling op het bureaublad
+        Rechtermuisknop op "Start SKV Checker.bat" > Meer opties weergeven >
+        Kopieren naar > Bureaublad (snelkoppeling maken).
+
+
+GEBRUIKEN
+---------
+1. Dubbelklik op "Start SKV Checker.bat" (of de snelkoppeling).
+2. Vul het UBN in.
+3. Vul 1 tot 5 AM91-nummers in (lege vakjes worden overgeslagen).
+4. Druk op "Controleer" (of Enter).
+5. Dubbelklik op een regel voor alle details.
+6. Eventueel "Exporteren..." voor een .txt-bestand.
+
+
+ALS HET NIET WERKT
+------------------
+* Er gebeurt niets na dubbelklikken
+    Start "Start SKV Checker (met foutmeldingen).bat". Dan blijft er een
+    zwart venster open waarin de foutmelding staat. Stuur die tekst door.
+
+* "Token ophalen mislukt"
+    Controleer gebruikersnaam en wachtwoord in appsettings.json.
+    De melding laat zien wat SKV antwoordde voor POST en voor GET.
+    Werkt een van beide wel in Postman maar niet hier? Zet TokenMethod dan
+    vast op "POST" of "GET".
+
+* "appsettings.json is geen geldige JSON"
+    Meestal een vergeten aanhalingsteken " of komma. Vergelijk met het
+    voorbeeld hierboven.
+
+* Melding over "execution policy" of "is niet digitaal ondertekend"
+    IT heeft PowerShell-scripts op je pc dichtgezet. Vraag IT om
+    SKV-Checker.ps1 toe te staan.
+
+
+BESTANDEN
+---------
+Start SKV Checker.bat                       - hiermee start je het programma
+Start SKV Checker (met foutmeldingen).bat   - zelfde, maar toont fouten
+SKV-Checker.ps1                             - het programma zelf (PowerShell)
+appsettings.example.json                    - voorbeeld van de instellingen
+appsettings.json                            - jouw adressen, gebruikersnaam, wachtwoord
+                                              (maak je zelf aan, staat niet op GitHub)
+LEESMIJ.txt                                 - dit bestand
+
+Het programma bewaart zelf niets. Het token blijft alleen in het geheugen
+zolang het venster open is.
