@@ -32,7 +32,7 @@ Zie [LEESMIJ.txt](LEESMIJ.txt) voor de uitgebreide uitleg en oplossingen bij pro
 | `Start SKV Checker (met foutmeldingen).bat` | Start het programma en laat foutmeldingen zien |
 | `SKV-Checker.ps1` | Het programma zelf |
 | `appsettings.example.json` | Voorbeeld van de instellingen (zonder wachtwoord) |
-| `appsettings.json` | Jouw eigen instellingen. **Staat niet op GitHub** (zie `.gitignore`) |
+| `appsettings.json` | Jouw eigen instellingen |
 
 ## Instellingen (`appsettings.json`)
 
@@ -43,3 +43,5 @@ Zie [LEESMIJ.txt](LEESMIJ.txt) voor de uitgebreide uitleg en oplossingen bij pro
 | `Username` / `Password` | Je SKV-inloggegevens |
 | `TokenMethod` | `GET`, `POST` of `AUTO` (eerst POST, dan GET) |
 | `TimeoutSeconds` | Maximaal wachten op SKV, in seconden |
+
+Benodigde URL's, gebruikersnaam en wachtwoord zijn op te vragen bij de auteur. Deze gegevens zijn aan een bedrijf gebonden!
