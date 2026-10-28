@@ -44,4 +44,4 @@ Zie [LEESMIJ.txt](LEESMIJ.txt) voor de uitgebreide uitleg en oplossingen bij pro
 | `TokenMethod` | `GET`, `POST` of `AUTO` (eerst POST, dan GET) |
 | `TimeoutSeconds` | Maximaal wachten op SKV, in seconden |
 
-Benodigde URL's, gebruikersnaam en wachtwoord zijn op te vragen bij de auteur. Deze gegevens zijn aan een bedrijf gebonden!
+Benodigde URL's, gebruikersnaam en wachtwoord zijn op te vragen bij de auteur. Deze gegevens zijn aan een bedrijf gebonden! 

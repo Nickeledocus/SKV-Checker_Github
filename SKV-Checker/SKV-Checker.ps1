@@ -1,4 +1,5 @@
 ﻿<#
+
     SKV Certificaat Checker
     -----------------------
     Controleert 1 UBN (Uniek Bedrijfsnummer) met 1 tot 5 AM91-nummers bij de SKV API.
