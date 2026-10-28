@@ -95,3 +95,5 @@ LEESMIJ.txt                                 - dit bestand
 
 Het programma bewaart zelf niets. Het token blijft alleen in het geheugen
 zolang het venster open is.
+
+

@@ -4,3 +4,4 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -STA -File "%~dp0SKV-Checker.p
 echo.
 echo Het programma is afgesloten. Staat hierboven een rode foutmelding? Kopieer die tekst.
 pause
+
